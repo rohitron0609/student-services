@@ -39,6 +39,7 @@ public class SecurityConfig{
 		return new BCryptPasswordEncoder();
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.csrf().disable()
